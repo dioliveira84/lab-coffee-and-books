@@ -1,0 +1,22 @@
+{{!-- <h1>{{title}}</h1> --}}
+<h1>Coffe & Books</h1>
+<div class="info">
+    <h3>List of all places</h3>
+    <a href="/places/new">Create new place</a>
+    <ul>
+        {{#each places}}
+        <li>
+            <a href="/places/{{ this._id}}">{{ this.name}}</a>
+            |
+            <a href="/places/{{ this._id}}/delete">Delete</a>
+        </li>
+        {{/each }}
+    </ul>
+    <div id="map"></div>
+</div>
+  <script> idRest = 'null'</script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV-R9RTge16U6KdCLwOd-eS36XQJvYYL0">
+  </script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/javascripts/script.js"></script>
